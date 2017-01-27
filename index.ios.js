@@ -15,7 +15,8 @@ import {
 export default class colored extends Component {
   render() {
     return (
-      <View style={styles.cirlces}>
+      <View style={styles.container}>
+        <View style={styles.circles} />
       </View>
     );
   }
@@ -27,6 +28,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'black',
+    borderRadius: 50,
+    width: 100,
+    height: 10,
   },
   welcome: {
     fontSize: 20,
@@ -39,10 +43,11 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   circles: {
-    borderRadius: '50%',
-    width: '200px',
-    height: '200px',
-  }
+    color: '#333',
+    borderRadius: 50,
+    width: 200,
+    height: 200,
+  },
 });
 
 AppRegistry.registerComponent('colored', () => colored);
